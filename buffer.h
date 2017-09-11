@@ -6,8 +6,8 @@ class buffer {
         queue <int> posicoes;
         public:
         bool estaVazio(){}
-        void add(){}
+        void add(int){}
         bool remove(){}
-        buffer(){}
+        buffer(int){}
                         
 }                
