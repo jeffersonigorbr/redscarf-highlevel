@@ -1,6 +1,6 @@
 #include <queue>
 
-class buffer {
+class Buffer {
         private:
         int length;
         queue <int> posicoes;
@@ -9,5 +9,5 @@ class buffer {
         void add(int){}
         bool remove(){}
         buffer(int){}
-                        
-}                
+
+}
