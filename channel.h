@@ -9,7 +9,7 @@ class Canal
 public:
 
 
-	// Ver implementação para poder fazer o construtor... 
+	//Construtor... 
 
 	Canal(T dados) {
 		dado(dados);
