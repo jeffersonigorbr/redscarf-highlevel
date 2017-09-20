@@ -1,20 +1,23 @@
+#include <climits>
+#include <systemc.h>
+
 class fila {
 private:
-        int capacidade;
-        int *dados;
-        int primeiro;
-        int ultimo;
-        int nItens;
+        sc_int capacity;
+        sc_int dados[capacity];
+        sc_int primeiro;
+        sc_int ultimo;
+        sc_int nItens;
 public:
-        void criarFila(fila *f, int capacidade){
-                f->capacidade = capacidade;
-                f->dados = (int *) malloc (f->capacidade * sizeof(int));
-                f->primeiro = 0;
-                f->ultimo = -1;
-                f-> nItens = 0;
-        }
-        void inserir(fila *f, int valor){
-                if (f->ultimo == f->capacidade -1){
+		sc_int push(sc_int){}
+		sc_int pop(){}
+		fila(sc_int size){}
+		sc_int size(){}
+		sc_int isFull(){}
+		sc_int isEmpty(){}
+		void moveOn(){} // used for organize the queue. Move the elements to next position (1,2,3,4,5 to 0,1,2,3,4)
+		 
+		
                         
                         
         

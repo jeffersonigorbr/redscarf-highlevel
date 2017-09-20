@@ -4,32 +4,28 @@ buffer::buffer(sc_int capacidade){
 	this->length = capacidade;
 }
 
-buffer::estaVazio(){
-	if (this->posicoes.empty()){
+buffer::isEmpty(){
+	if (this->posicoes.isEmpty()){
 		return 1;
 	} else {
 		return 0;
 	}
 }
 buffer::add(sc_int valor){
-	if (this->posicoes >= this->length){
-		wait(read_event);
-		return -1; // pilha virtualmente cheia
+	if (posicoes.isFull()){
+		return -1; // queue is full
 	} else {
 		this->posicoes.push(valor);
-		write_event.notify();
 	}
 buffer::remove(){
-	if (this->posicoes < 1){
-		wait(write_event);
-		return 0; // erro devido a fila vazia
+	if (this->posicoes.size() < 1){
+		return 0; // queue is empty. Nothing to remove
 	} else {
-		read_event.notify();
 		return this->posicoes.pop();
 	}
 }	
-buffer::estaCheio(){
-	if (this->posicoes.size == this->length){
+buffer::isFull(){
+	if (this->posicoes.size() == this->length){
 		return 1;
 	} else {
 		return 0;
