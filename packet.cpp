@@ -20,3 +20,7 @@ packet::void set_flit_packet(flit flit_packet[SIZE_FLIT_PACKET]){
 		}
 	}
 }
+
+packet::void set_destino(Coodernada destino){
+	this.destino = destino;
+}

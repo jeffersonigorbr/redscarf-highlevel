@@ -8,4 +8,5 @@ public:
 	packet();
 	~packet();
 	void set_flit_packet(flit flit_packet[SIZE_FLIT_PACKET]);
+	void set_destino(Coodernada destino);
 }
