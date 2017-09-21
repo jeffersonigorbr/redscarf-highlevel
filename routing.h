@@ -5,9 +5,6 @@ using namespace std;
 
 class Routing{
 
-	Coordenada destino;
-	Coordenada posicao;
-
 public:
     Routing();
     ~Routing();
