@@ -7,6 +7,11 @@
 #define OESTE 3
 #define CHEGADA 4
 
+#define CABECALHO 0
+#define INSTRUCAO 1
+#define TERMINADOR 2
+#define SIZE_FLIT_PACKET 32
+
 struct Coordenada{
 
 int x;
