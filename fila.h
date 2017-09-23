@@ -1,5 +1,5 @@
 #include <climits>
-#include <systemc.h>
+#include "systemc.h"
 
 class fila {
 private:

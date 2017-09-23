@@ -1,9 +1,9 @@
 #include <queue>
-#include <systemc.h>
+#include "systemc.h"
 #include "interfaces.cpp"
 #include "fila.h"
 
-class buffer : public sc_channel {
+class Buffer : public sc_channel {
         private:
         sc_int<32> length;
         fila posicoes(length);
@@ -12,6 +12,6 @@ class buffer : public sc_channel {
         sc_logic isEmpty(){}
         void add(sc_int){}
         sc_int remove(){}
-        buffer(sc_int){}
+        Buffer(sc_int){}
                         
 }                
