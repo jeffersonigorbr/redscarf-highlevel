@@ -1,5 +1,6 @@
 #include "systemc.h"
 #include "buffer.h"
+#include "parameters.h"
 
 #include <vector>
 
@@ -9,6 +10,7 @@ class Router
 {
     vector <buffer> buffers;
     vector <Arbiter> arbiters;
+    Coordenada posicao;
 public:
     Router();
     ~Router();
