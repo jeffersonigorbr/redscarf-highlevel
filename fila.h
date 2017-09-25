@@ -1,9 +1,5 @@
 #include <climits>
 #include "systemc.h"
-<<<<<<< HEAD
-=======
-#include <vector>
->>>>>>> 316c942a9521907b28180014867bec02707b47b0
 
 
 #define depth 8
