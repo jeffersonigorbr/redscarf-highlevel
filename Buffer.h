@@ -1,5 +1,5 @@
 #include <systemc.h>
-#include "interfaces.cpp"
+#include "interfaces.cpp" 
 #include "fila.h"
 /* portas/sinais feitos de acordo com a imagem do roteador SoCIN.
  * Dúvidas: como posso acionar os outros métodos via SC_METHOD? Pq a lista de sensibilidade está ok, mas não está acionando o método de leitura do buffer (apenas adição)
