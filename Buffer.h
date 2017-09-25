@@ -1,6 +1,7 @@
 #include <systemc.h>
 #include "interfaces.cpp" 
 #include "fila.h"
+#include "flit.h"
 /* portas/sinais feitos de acordo com a imagem do roteador SoCIN.
  * Dúvidas: como posso acionar os outros métodos via SC_METHOD? Pq a lista de sensibilidade está ok, mas não está acionando o método de leitura do buffer (apenas adição)
  * 
@@ -9,7 +10,7 @@
 class Buffer : public sc_module {
         private:
 			sc_int<32> length;
-			fila posicoes(sc_int<32>);
+			fila posicoes(flit);
 			sc_in<sc_int<34>> din; // data + bop + eop
 			sc_in<sc_int<32>> wr;
 			sc_in<sc_int<32>> rd;
