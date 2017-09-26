@@ -2,15 +2,17 @@
 #define PARAMETERS_H_INCLUDED
 
 #define NORTE 0
-#define SUL 1
-#define LESTE 2
+#define LESTE 1
+#define SUL 2
 #define OESTE 3
 #define CHEGADA 4
+
+#define ERROR 5
 
 #define CABECALHO 0
 #define INSTRUCAO 1
 #define TERMINADOR 2
-#define SIZE_FLIT_PACKET 32
+#define SIZE_FLIT_PACKET 50
 
 struct Coordenada{
 
