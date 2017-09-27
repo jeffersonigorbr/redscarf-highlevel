@@ -4,17 +4,19 @@
 
 using namespace std;
 
-class Arbiter{
-public:
-	int ponteiro = NORTE;
-	int port; // indica a que porta o arbitro está associado
-	int priority; // NORTE 0, LESTE 1, SUL 2, OESTE 3
+SC_MODULE(Arbiter){
+	sc_in <buffer> bufferN;
+	sc_in <buffer > bufferE;
+	sc_in <buffer> > bufferS;
+	sc_in <buffer> > bufferW;
+	sc_in <buffer> > portDestiny;
+	sc_out <sc_int<32> > work;
+	sc_int<32> > pointer = NORTH; // NORTH 0, EAST 1, SOUTH 2, WEST 3
 
     ArbiterRoundRobin();
     ~ArbiterRoundRobin();
     void setPriority();
-    int verificaPriority();
-    int verificaCall();
-    int verificaBuffer(buffer Buffer);
+    int checkPriority();
+    sc_int<32> checkAvailiability();
 
 };

@@ -1,29 +1,18 @@
 #include <routing.h>
 
-Routing::Routing()
-{
-
-}
-
-Routing::~Routing()
-{
-
-}
-
-int routing::routing_xy(Coordenada posicao, Coordenada destino){
-	if(destino.y > posicao.y){
-			return LESTE;
-		}
-		else if(destino.y < posicao.y){
-			return OESTE;
-		}
-		else if(destino.x > posicao.x){
-			return SUL;
-		}
-		else if(destino.x < posicao.x){
-			return NORTE;
-		}
-		else{
-			return CHEGADA;
-        }
+void routing::routing_xy(){
+	if(destiny.y.read() > posicion.y.read()){
+			portDestiny.write(EAST);
+	}else if(destiny.y.read() < posicion.y.read()){
+			portDestiny.write(WEST);
+	}
+	else if(destiny.x.read() > posicion.x.read()){
+			portDestiny.write(SOUTH);
+	}
+	else if(destiny.x.read() < posicion.x.read()){
+			portDestiny.write(NORTH);
+	}
+	else{
+			portDestiny.write(LOCAL);
+    }
 }

@@ -1,20 +1,20 @@
 #ifndef PARAMETERS_H_INCLUDED
 #define PARAMETERS_H_INCLUDED
 
-#define NORTE 0
-#define LESTE 1
-#define SUL 2
-#define OESTE 3
-#define CHEGADA 4
+#define NORTH 0
+#define EAST 1
+#define SOUTH 2
+#define WEST 3
+#define LOCAL 4
 
 #define ERROR 5
 
-#define CABECALHO 0
-#define INSTRUCAO 1
-#define TERMINADOR 2
+#define BEGIN_PACKET 0
+#define INSTRUCION 1
+#define END_PACKET 2
 #define SIZE_FLIT_PACKET 50
 
-struct Coordenada{
+struct Coordinated{
 
 int x;
 int y;
