@@ -7,6 +7,10 @@
 #define WEST 3
 #define LOCAL 4
 
+#define FREE 0
+#define SENDING 1
+#define WAITING 1
+
 #define ERROR 5
 
 #define BEGIN_PACKET 0
