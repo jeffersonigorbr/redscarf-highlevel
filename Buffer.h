@@ -17,7 +17,7 @@ class Buffer : public sc_module {
 			sc_out<sc_int<32>> wok;
 			sc_out<sc_int<32>> dout;
 			sc_out<sc_int<32>> rok;
-			
+			int prioridade = 0; // Ver se realmente é necessário...
         public:
 			sc_int<32> isFull();
 			sc_int<32> isEmpty();
