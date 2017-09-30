@@ -18,7 +18,7 @@ SC_MODULE(Arbiter){
 	sc_int<32> > pointer = NORTH; // NORTH 0, EAST 1, SOUTH 2, WEST 3
 
     void setPriority(Buffer); // Ver se dá pra dar um read no sc_in...
-    void checkPriority();
+    int checkPriority();
     void checkAvailiability();
 
     SC_CTOR(Arbiter){
