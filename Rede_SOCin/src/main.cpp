@@ -21,6 +21,18 @@ int main(int argc, char const *argv[])
 	rede[0][1] = *roteador2;
 	rede[1][0] = *roteador3;
 	rede[1][1] = *roteador4;
+	//Setando as cordenadas de cada roteador... Tem como fazer isso dinamicamente, mas dá um trabalhinho... Wait...
+	roteador1->roteamento->cordenada.x = 0;
+	roteador1->roteamento->cordenada.y = 0;
+	
+	roteador2->roteamento->cordenada.x = 0;
+	roteador2->roteamento->cordenada.y = 1;
+	
+	roteador3->roteamento->cordenada.x = 1;
+	roteador3->roteamento->cordenada.y = 0;
+	
+	roteador3->roteamento->cordenada.x = 1;
+	roteador3->roteamento->cordenada.y = 1;
 	
 	return 0;
 }
