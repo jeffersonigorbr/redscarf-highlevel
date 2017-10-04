@@ -4,6 +4,7 @@ Roteador::Roteador() {
 	this->in_data = new Flit();
 	this->arbitro = new Arbitro();
 	this->roteamento = new Roteamento();
+	//Passar o valor atual da posição do roteador...
 	this->buffer = new Buffer();
 	this->controle_fluxo = new Controle_fluxo();
 }
