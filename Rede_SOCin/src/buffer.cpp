@@ -19,6 +19,6 @@ void Buffer::remove() {
 
 //Se estiver Vazio retorna 1, senão retorna 0
 int Buffer::isEmpty() {
-	return (this->flits.empty() == 0) ? 1: 0;
+	return (this->flits.empty() == 1) ? 1: 0;
 }
 

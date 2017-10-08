@@ -13,15 +13,15 @@ class Roteamento
 {
 public:
 	//Acho que falta colocar o n+2
-	Flit *in_data; //n+2
+	Flit in_data; //n+2
 
-	struct Cordenada
+	struct cordenada_local
 	{
 	public:
 		int x;
 		int y;
 	} cordenada;
-	struct Cordenada_destino
+	struct cordenada_dest
 	{
 	public:
 		int x;

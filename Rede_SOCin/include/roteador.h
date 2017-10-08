@@ -4,12 +4,18 @@
 #include "controle_fluxo.h"
 #include "buffer.h"
 #include "flit.h"
+#define NORTH 0
+#define EAST 1
+#define SOUTH 2
+#define WEST 3
+#define LOCAL 4
+
 
 class Roteador
 {
 public:
 
-	Flit *in_data; //n+2
+	Flit in_data; //n+2
 	int din; //din do buffer que é data + bop + eop
 	int x_dout; // Saída do roteamento n+2
 
@@ -39,7 +45,7 @@ public:
 
 
 	Arbitro *arbitro;
-	Roteamento *roteamento;
+	Roteamento roteamento;
 	Buffer *buffer;
 	Controle_fluxo *controle_fluxo;
 
