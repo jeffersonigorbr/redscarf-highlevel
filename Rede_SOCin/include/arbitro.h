@@ -1,4 +1,5 @@
 #include <iostream>
+#include "systemc.h"
 
 #define NORTH 0
 #define EAST 1
@@ -6,10 +7,10 @@
 #define WEST 3
 #define LOCAL 4
 
-class Arbitro
+class Arbitro 
 {
 public:
-	int portaDestino;
+	sc_uint<32> portaDestino;
 	int buffercircular[5];
 
 	Arbitro();

@@ -1,8 +1,9 @@
 #ifndef _FLIT_H_
 #define _FLIT_H_ 
 #include <iostream>
+#include "systemc.h"
 
-class Flit
+class Flit 
 {
 public:
 	int cabeca;

@@ -1,7 +1,7 @@
 #include "buffer.h"
 
 Buffer::Buffer() {
-	controle_fluxo = new Controle_fluxo();
+	
 }
 
 Buffer::~Buffer() {
@@ -9,12 +9,26 @@ Buffer::~Buffer() {
 }
 
 //Funcionando
-void Buffer::add(Flit flit) {
-	this->flits.push(flit);
+void Buffer::add() {
+	if (wr.read() == 1)
+	{
+		if (flits.size() == this->length){
+			wok.write(0); // error, value not added
+		} else {
+			this->flits.push(din);
+			//wok.write(1);
+		}	
+	}
+	
 }
 //Funcionando
 void Buffer::remove() {
-	this->flits.pop();
+	if (flits.size() < 1){
+		rok.write(0); // queue is empty. Nothing to remove
+	} else if (rd.read() == 1){
+		flits.pop();
+		rok.write(1);
+	}
 }
 
 //Se estiver Vazio retorna 1, senão retorna 0

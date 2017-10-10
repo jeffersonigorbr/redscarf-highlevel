@@ -5,28 +5,36 @@
 #include <queue>
 #include "flit.h"
 #include "controle_fluxo.h"
+#include "systemc.h"
 
-class Buffer
+class Buffer : public sc_module
 {
 public:
-	Controle_fluxo *controle_fluxo;
+	
 	
 	std::queue<Flit> flits;
 
-	int din; //Entrada data + bop + eop
-	int dout; //Saída que vai para o roteamento
+	Flit din; //Entrada data + bop + eop
+	Flit dout; //Saída que vai para o roteamento
 
-	int wr; //Entrada que vem do controle de fluxo
-	int wok; //Saída que volta para o buffer
-
-	int rok; //Saída ?
-	int rd; //Entrada que vem do chaveamento
+	sc_in < sc_uint<32> > wr; //Entrada que vem do controle de fluxo
+	sc_out< sc_uint<32> > wok; //Saída que volta para o buffer
+	sc_in < sc_uint<32> > rd; //Entrada que vem do chaveamento
+	sc_out<sc_int<32> > rok; //Saída ?
 	
+	sc_int<32> length;
+
 	Buffer();
 	~Buffer();
-	void add(Flit);
+	void add();
 	void remove();
 	int isEmpty();
+
+	SC_CTOR(Buffer) {
+        SC_METHOD(add);
+        SC_METHOD(remove);
+        sensitive << wr << rd;
+    }
 
 	
 };

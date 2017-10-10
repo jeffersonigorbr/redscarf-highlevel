@@ -2,7 +2,7 @@
 #include <vector>
 #include "systemc.h"
 #include "pacote.h"
-#include "buffer.h"
+//#include "buffer.h"
 #include "flit.h"
 #include "roteamento.h"
 #include "roteador.h"
@@ -10,10 +10,11 @@
 using namespace std;
 
 int main(int argc, char const *argv[])
-{
+{/*
 
-//***************************************************************************************************
+***************************************************************************************************
 	//Criando um pacote com um flit que quer ir para o roteador na posicao (1,1)
+	//sc_in<int> wrt;
 	Pacote pct;
 	pct.flit[0].cabeca = 1;
 	pct.flit[0].terminador = -1;
@@ -21,11 +22,11 @@ int main(int argc, char const *argv[])
 	//Cordenadas para qual o flit deve ir
 	pct.flit[0].cordenadas_f.x = 1;
 	pct.flit[0].cordenadas_f.y = 1;
-//***************************************************************************************************
+***************************************************************************************************
 
+//wrt.write(2);
 
-
-//***************************************************************************************************
+***************************************************************************************************
 	//Criando uma rede 2x2
 	std::vector<std::vector<Roteador> >  rede(2, vector<Roteador>(2)); // Matriz de roteadores... 2x2
 	//Criando os roteadores
@@ -38,9 +39,9 @@ int main(int argc, char const *argv[])
 	rede[0][1] = roteador2;
 	rede[1][0] = roteador3;
 	rede[1][1] = roteador4;
-//***************************************************************************************************
+***************************************************************************************************
 // SIMULAÇÃO...
-//***************************************************************************************************
+***************************************************************************************************
 
 // Roteador 1
 rede[0][0].in_data = pct.flit[0];
@@ -123,11 +124,11 @@ i++;
 
 
 
-std::cout <<"payload no rotador destino" << rede[x][y].buffer->flits.back().payload << std::endl;
+std::cout <<"payload no rotador destino " << rede[x][y].buffer->flits.back().payload << std::endl;
 
 
 std::cout << x;
 std::cout << y;
-	
+	*/
 	return 0;
 }

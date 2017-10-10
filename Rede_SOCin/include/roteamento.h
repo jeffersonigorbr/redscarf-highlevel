@@ -3,13 +3,14 @@
 
 #include <iostream>
 #include "flit.h"
+#include "systemc.h"
 #define NORTH 0
 #define EAST 1
 #define SOUTH 2
 #define WEST 3
 #define LOCAL 4
 
-class Roteamento
+class Roteamento 
 {
 public:
 	//Acho que falta colocar o n+2

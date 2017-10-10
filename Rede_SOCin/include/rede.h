@@ -1,6 +1,7 @@
 #include <iostream>
+#include "systemc.h"
 
-class Rede
+class Rede 
 {
 public:
 	Rede();

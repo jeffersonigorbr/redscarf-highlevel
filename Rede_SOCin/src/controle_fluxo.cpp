@@ -1,12 +1,13 @@
 #include "controle_fluxo.h"
 
-Controle_fluxo::Controle_fluxo() {
-	this->in_val = 0;
-	this->in_ack = 0;
-	this->wr = 0;
-	this->wok = 0;
+void controle_fluxo::request(){
+	if(in_val.read() == 1){
+		wr.write(1);
+	}
 }
 
-Controle_fluxo::~Controle_fluxo() {
-	
+void controle_fluxo::response(){
+	if(wok.read() == 1){
+		in_ack.write(1);
+	}
 }

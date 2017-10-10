@@ -1,6 +1,7 @@
 #include <iostream>
 #include "flit.h"
-class Pacote
+#include "systemc.h"
+class Pacote 
 {
 public:
 	//Vetor de Flits com 10 flits
