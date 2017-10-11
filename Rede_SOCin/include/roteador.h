@@ -29,7 +29,27 @@ public:
 	sc_uint<32> rd; // É a resposta que vem do arbitro 
 
 	
-	Arbitro arbitro;
+	Arbitro arbitro_centralizado;
+
+	Buffer *buffer_norte;
+	Buffer *buffer_sul;
+	Buffer *buffer_leste;
+	Buffer *buffer_oeste;
+
+	controle_fluxo *cf_buffer_norte;
+	controle_fluxo *cf_buffer_sul;
+	controle_fluxo *cf_buffer_leste;
+	controle_fluxo *cf_buffer_oeste;
+
+	Roteamento roteamento_norte;
+	Roteamento roteamento_sul;
+	Roteamento roteamento_leste;
+	Roteamento roteamento_oeste;
+
+	controle_fluxo *cf_saida_norte;
+	controle_fluxo *cf_saida_sul;
+	controle_fluxo *cf_saida_leste;
+	controle_fluxo *cf_saida_oeste;
 
 
 	void execute();

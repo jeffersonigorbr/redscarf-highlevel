@@ -3,7 +3,7 @@
 
 
 //Funcionando
-void buffer::add() {
+void Buffer::add() {
 	if (wr.read() == 1)
 	{
 		if (flits.size() == this->length){
@@ -16,7 +16,7 @@ void buffer::add() {
 	
 }
 //Funcionando
-void buffer::remove() {
+void Buffer::remove() {
 	if (flits.size() < 1){
 		rok.write(0); // queue is empty. Nothing to remove
 	} else if (rd.read() == 1){
@@ -26,7 +26,7 @@ void buffer::remove() {
 }
 
 //Se estiver Vazio retorna 1, senão retorna 0
-int buffer::isEmpty() {
+int Buffer::isEmpty() {
 	return (this->flits.empty() == 1) ? 1: 0;
 }
 
