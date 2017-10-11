@@ -1,15 +1,9 @@
 #include "buffer.h"
 
-Buffer::Buffer() {
-	
-}
 
-Buffer::~Buffer() {
-	
-}
 
 //Funcionando
-void Buffer::add() {
+void buffer::add() {
 	if (wr.read() == 1)
 	{
 		if (flits.size() == this->length){
@@ -22,7 +16,7 @@ void Buffer::add() {
 	
 }
 //Funcionando
-void Buffer::remove() {
+void buffer::remove() {
 	if (flits.size() < 1){
 		rok.write(0); // queue is empty. Nothing to remove
 	} else if (rd.read() == 1){
@@ -32,7 +26,7 @@ void Buffer::remove() {
 }
 
 //Se estiver Vazio retorna 1, senão retorna 0
-int Buffer::isEmpty() {
+int buffer::isEmpty() {
 	return (this->flits.empty() == 1) ? 1: 0;
 }
 

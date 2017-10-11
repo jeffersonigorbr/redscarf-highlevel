@@ -25,14 +25,11 @@ public:
 	sc_in < sc_uint<32> > wr; // Entrada do buffer que vem do controle de fluxo
 	sc_out< sc_uint<32> > wok; // Saída do buffer que vai para o controle de fluxo
 
-
 	sc_out< sc_uint<32> > x_rok; // É a variável que solicita se pode mandar para o outro roteador ao chaveamento (Arbitro)
 	sc_uint<32> rd; // É a resposta que vem do arbitro 
 
-
 	
-	
-	
+	Arbitro arbitro;
 
 
 	void execute();

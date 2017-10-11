@@ -7,7 +7,7 @@
 #include "controle_fluxo.h"
 #include "systemc.h"
 
-class Buffer : public sc_module
+class buffer : public sc_module
 {
 public:
 	
@@ -24,13 +24,12 @@ public:
 	
 	sc_int<32> length;
 
-	Buffer();
-	~Buffer();
+
 	void add();
 	void remove();
 	int isEmpty();
 
-	SC_CTOR(Buffer) {
+	SC_CTOR(buffer) {
         SC_METHOD(add);
         SC_METHOD(remove);
         sensitive << wr << rd;
