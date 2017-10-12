@@ -1,10 +1,11 @@
 #include <iostream>
+#include <systemc.h>
 #include "arbitro.h"
 #include "roteamento.h"
 #include "controle_fluxo.h"
 #include "buffer.h"
 #include "flit.h"
-#include "systemc.h"
+
 #define NORTH 0
 #define EAST 1
 #define SOUTH 2
@@ -31,10 +32,10 @@ public:
 	
 	Arbitro arbitro_centralizado;
 
-	Buffer *buffer_norte;
-	Buffer *buffer_sul;
-	Buffer *buffer_leste;
-	Buffer *buffer_oeste;
+	//Buffer *buffer_norte;
+	//Buffer *buffer_sul;
+	//Buffer *buffer_leste;
+	//Buffer *buffer_oeste;
 
 	controle_fluxo *cf_buffer_norte;
 	controle_fluxo *cf_buffer_sul;
@@ -55,13 +56,17 @@ public:
 	void execute();
 	void arbitragem();
 
+	roteador(sc_module_name name) : sc_module(name) {
+
+	}
+/*
 	SC_CTOR(roteador) {
         SC_METHOD(execute);
         SC_METHOD(arbitragem);
         
 		sensitive << in_val;
 		sensitive << wr;
-    }
+    }*/
 
 	
 };

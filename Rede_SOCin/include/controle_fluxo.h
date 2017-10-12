@@ -2,7 +2,7 @@
 #define _CONTROLE_FLUXO_H_ 
 
 #include <iostream>
-#include "systemc.h"
+#include <systemc.h>
 
 class controle_fluxo : public sc_module
 {

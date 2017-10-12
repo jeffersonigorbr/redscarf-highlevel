@@ -1,7 +1,7 @@
 #ifndef _FLIT_H_
 #define _FLIT_H_ 
 #include <iostream>
-#include "systemc.h"
+#include <systemc.h>
 
 class Flit 
 {
@@ -16,8 +16,6 @@ public:
 		int y;
 	}cordenadas_f;
 	
-	Flit();
-	~Flit();
 	
 };
 

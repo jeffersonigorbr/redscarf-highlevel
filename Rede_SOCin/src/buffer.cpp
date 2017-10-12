@@ -10,7 +10,7 @@ void Buffer::add() {
 			wok.write(0); // error, value not added
 		} else {
 			this->flits.push(din);
-			//wok.write(1);
+			wok.write(1);
 		}	
 	}
 	

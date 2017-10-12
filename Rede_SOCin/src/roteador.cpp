@@ -1,18 +1,8 @@
 #include "roteador.h"
+
 /*
-Roteador::Roteador() {
-	this->arbitro = new Arbitro();
-	//Passar o valor atual da posição do roteador...
-	this->buffer = new Buffer();
-	this->controle_fluxo = new Controle_fluxo();
-}
-
-Roteador::~Roteador() {
-	
-}
-
 void Roteador::execute() {
-
+	
 	//this->controle_fluxo->setIn_val(in_val);
 	this->buffer->wok.write(this->buffer->isEmpty());
 	std::cout << "BUFFER WOK " <<this->buffer->wok << std::endl;
@@ -31,7 +21,7 @@ void Roteador::execute() {
 	}
 	
 
-}*/
-void roteador::arbitragem() {
-
 }
+void Roteador::arbitragem() {
+
+}*/

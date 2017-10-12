@@ -1,5 +1,5 @@
 #include <iostream>
-#include "systemc.h"
+#include <systemc.h>
 
 #define NORTH 0
 #define EAST 1

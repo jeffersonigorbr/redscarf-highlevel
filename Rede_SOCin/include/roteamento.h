@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include "flit.h"
-#include "systemc.h"
+#include <systemc.h>
 #define NORTH 0
 #define EAST 1
 #define SOUTH 2

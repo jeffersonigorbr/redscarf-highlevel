@@ -1,5 +1,5 @@
 #include <iostream>
-#include "systemc.h"
+#include <systemc.h>
 
 class Rede 
 {
