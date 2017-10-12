@@ -4,9 +4,9 @@
 #include <iostream>
 #include <systemc.h>
 
-class controle_fluxo : public sc_module
+SC_MODULE (controle_fluxo)
 {
-public:
+
 	sc_in < sc_uint<32> > in_val; //Entrada pra ver se no buffer terá espaço 
 	sc_out< sc_uint<32> > in_ack; //Retorno da solicitação se terá espaço
 

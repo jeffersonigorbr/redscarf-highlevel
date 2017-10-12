@@ -11,7 +11,7 @@
 SC_MODULE (Buffer)
 {
 
-	
+public:
 	
 	std::queue<Flit> flits;
 

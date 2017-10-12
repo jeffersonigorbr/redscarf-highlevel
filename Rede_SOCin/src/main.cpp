@@ -49,7 +49,20 @@ int main(int argc, char const *argv[])
 //****************************************
 
 
+// Criar uma Rede 4x4
+	roteador *rede[3][3];
 
+// Criando os roteadores para alocar na rede
+	roteador roteador1("rot1");
+	Buffer *buffw;
+	//roteador1.in_data = pct.flit[0];
+	std::cout<< roteador1.buffer_norte->din.payload << endl;
+
+
+
+	//std::cout<< buffw->din.payload << endl; //= pct.flit[0];
+	//roteador1.buffer_norte->din = pct.flit[0];
+	//std::cout << roteador1.buffer_norte->din.payload;
 
 	return 0;
 }
