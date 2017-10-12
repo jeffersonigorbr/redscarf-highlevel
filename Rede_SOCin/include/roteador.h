@@ -61,10 +61,6 @@ public:
 
 	}
 
-/*	roteador(sc_module_name name) : sc_module(name) {
-
-	}
-*/
 	SC_CTOR(roteador) {
 		buffer_norte = new Buffer("bufferN");
 		buffer_sul = new Buffer("bufferS");
@@ -83,7 +79,7 @@ public:
 		cf_saida_leste = new controle_fluxo("cf_saida_L");
 		cf_saida_oeste = new controle_fluxo("cf_saida_O");
 		cf_saida_local = new controle_fluxo("cf_saida_Local");
-		
+
         SC_METHOD(execute);
         SC_METHOD(arbitragem);
         

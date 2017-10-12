@@ -54,15 +54,26 @@ int main(int argc, char const *argv[])
 
 // Criando os roteadores para alocar na rede
 	roteador roteador1("rot1");
-	Buffer *buffw;
-	//roteador1.in_data = pct.flit[0];
-	std::cout<< roteador1.buffer_norte->din.payload << endl;
+	roteador roteador2("rot2");
+	roteador roteador3("rot3");
+	roteador roteador4("rot4");
+	roteador roteador5("rot5");
+	roteador roteador6("rot6");
+	roteador roteador7("rot7");
+	roteador roteador8("rot8");
+	roteador roteador9("rot9");
 
+// Alocando os roteadores no vetor rede
 
-
-	//std::cout<< buffw->din.payload << endl; //= pct.flit[0];
-	//roteador1.buffer_norte->din = pct.flit[0];
-	//std::cout << roteador1.buffer_norte->din.payload;
+	rede[0][0] = &roteador1;	
+	rede[0][1] = &roteador2;	
+	rede[0][2] = &roteador3;	
+	rede[1][0] = &roteador4;	
+	rede[1][1] = &roteador5;	
+	rede[1][2] = &roteador6;	
+	rede[2][0] = &roteador7;	
+	rede[2][1] = &roteador8;	
+	rede[2][2] = &roteador9;	
 
 	return 0;
 }
